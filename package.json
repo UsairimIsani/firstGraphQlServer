@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "GraphQl Api Server",
   "scripts": {
-    "start": "node ./server/index.js",
+    "start": "node server/index.js",
     "start:development": "nodemon ./server/index.js",
     "bs": "webpack --config webpack.config.js"
   },
