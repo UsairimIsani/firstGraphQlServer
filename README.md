@@ -1,8 +1,17 @@
 # My First GraphQL Server.
-### Play with this endpoind https://secure-mesa-41140.herokuapp.com/graphiql
-### Endpoint to use in Apps https://secure-mesa-41140.herokuapp.com/graphql
 
-Availabel Queries:
+## npm install 
+
+## npm run bs
+
+then open a new cmd 
+
+## npm run start:development
+
+### Play with this endpoind http://localhost:4500/graphiql
+### Endpoint to use in Apps http://localhost:4500//graphql
+
+## Availabel Queries:
 
 patients
 
@@ -12,7 +21,7 @@ doctors
 
 doctor(id:String)
 
-Available mutations
+## Available mutations
 
 createDoctor(name:String,age:Int,speciality:String)
 
