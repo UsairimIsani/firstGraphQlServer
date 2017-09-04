@@ -17,6 +17,7 @@ import {
     mongoConfig
 } from './config/mongoConfig.js'
 import GraphQlSchema from './graphql';
+import routes from './Routes'
 
 let mongo = mongoose.connect(mongoConfig.url, {
     useMongoClient: true
@@ -31,9 +32,12 @@ app.use('/graphql', bodyParser.json(), graphqlExpress({
         Doctors
     }
 }));
+
 app.use('/graphiql', graphiqlExpress({
     endpointURL: '/graphql'
 }))
+app.use(bodyParser.json());
+app.use('/restapi',routes);
 app.get('/', (req, res) => {
     res.send("hello World")
 })
