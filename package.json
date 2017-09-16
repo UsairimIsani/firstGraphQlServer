@@ -15,7 +15,9 @@
     "express": "^4.15.4",
     "graphql": "^0.11.2",
     "graphql-tools": "^1.2.2",
-    "mongoose": "^4.11.10"
+    "mongoose": "^4.11.10",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -32,5 +34,9 @@
     "nodemon": "^1.11.0",
     "webpack": "^3.5.5",
     "webpack-externals-plugin": "^1.0.0"
+  },
+  "engines": {
+     "node" : ">=8.4.2"
   }
+
 }

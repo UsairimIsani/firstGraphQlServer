@@ -43,6 +43,5 @@ app.get('/', (req, res) => {
 })
 app.listen(process.env.PORT || 4500, () => {
     console.log("http://localhost:4500/graphiql");
-
 })
 // "start": "nodemon --exec babel-node index.js"
