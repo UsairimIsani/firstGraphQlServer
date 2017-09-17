@@ -12,3 +12,8 @@ export async function createPatient(req,res,next){
     let newPatient = await new Patients({name , age , disease}).save();
     res.json(newPatient);
 }
+export async function deletePatient(req,res,next){
+    let { id } = req.body; 
+    let newPatient = await new Patients.findByIdAndRemove({_id:id}).exec();
+    res.json(delPatient);
+}

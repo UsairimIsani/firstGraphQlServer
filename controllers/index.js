@@ -6,7 +6,8 @@ import {
 import {
     allPatient,
     getPatient,
-    createPatient
+    createPatient,
+    deletePatient
 } from './PatientController';
 
 export {
@@ -15,5 +16,6 @@ export {
     getDoctor,
     getPatient,
     createDoctor,
-    createPatient
+    createPatient,
+    deletePatient
 }

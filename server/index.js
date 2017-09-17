@@ -123548,6 +123548,7 @@ router.route('/getpatient').post(_controllers.getPatient);
 router.route('/doctors').get(_controllers.allDoctors);
 router.route('/getdoctor').post(_controllers.getDoctor);
 router.route('/createpatient').post(_controllers.createPatient);
+router.route('/deletepatient').post(deletepatient);
 router.route('/createdoctor').post(_controllers.createDoctor);
 exports.default = router;
 
@@ -123561,7 +123562,7 @@ exports.default = router;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.createPatient = exports.createDoctor = exports.getPatient = exports.getDoctor = exports.allPatient = exports.allDoctors = undefined;
+exports.deletePatient = exports.createPatient = exports.createDoctor = exports.getPatient = exports.getDoctor = exports.allPatient = exports.allDoctors = undefined;
 
 var _DoctorController = __webpack_require__(541);
 
@@ -123573,6 +123574,7 @@ exports.getDoctor = _DoctorController.getDoctor;
 exports.getPatient = _PatientController.getPatient;
 exports.createDoctor = _DoctorController.createDoctor;
 exports.createPatient = _PatientController.createPatient;
+exports.deletePatient = _PatientController.deletePatient;
 
 /***/ }),
 /* 541 */
@@ -123693,7 +123695,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.createPatient = exports.getPatient = exports.allPatient = undefined;
+exports.deletePatient = exports.createPatient = exports.getPatient = exports.allPatient = undefined;
 
 var _regenerator = __webpack_require__(165);
 
@@ -123782,6 +123784,35 @@ var createPatient = exports.createPatient = function () {
 
     return function createPatient(_x7, _x8, _x9) {
         return _ref3.apply(this, arguments);
+    };
+}();
+
+var deletePatient = exports.deletePatient = function () {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee4(req, res, next) {
+        var id, newPatient;
+        return _regenerator2.default.wrap(function _callee4$(_context4) {
+            while (1) {
+                switch (_context4.prev = _context4.next) {
+                    case 0:
+                        id = req.body.id;
+                        _context4.next = 3;
+                        return new _models.Patients.findByIdAndRemove({ _id: id }).exec();
+
+                    case 3:
+                        newPatient = _context4.sent;
+
+                        res.json(delPatient);
+
+                    case 5:
+                    case 'end':
+                        return _context4.stop();
+                }
+            }
+        }, _callee4, this);
+    }));
+
+    return function deletePatient(_x10, _x11, _x12) {
+        return _ref4.apply(this, arguments);
     };
 }();
 
