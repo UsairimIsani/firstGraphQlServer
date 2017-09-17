@@ -123548,7 +123548,7 @@ router.route('/getpatient').post(_controllers.getPatient);
 router.route('/doctors').get(_controllers.allDoctors);
 router.route('/getdoctor').post(_controllers.getDoctor);
 router.route('/createpatient').post(_controllers.createPatient);
-router.route('/deletepatient').post(deletepatient);
+router.route('/deletepatient').post(_controllers.deletePatient);
 router.route('/createdoctor').post(_controllers.createDoctor);
 exports.default = router;
 
